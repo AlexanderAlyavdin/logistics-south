@@ -6,6 +6,8 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import { Row, Col } from "react-bootstrap";
 import PageSection from "components/PageSection";
+import SectionHeader from "components/SectionHeader";
+
 import Client from "components/Client";
 
 const Clients = ({ className }) => {
@@ -14,6 +16,7 @@ const Clients = ({ className }) => {
       markdownRemark(fields: { fileName: { regex: "/clients/i" } }) {
         frontmatter {
           anchor
+          header
           clients {
             href
             imageFileName
@@ -28,10 +31,13 @@ const Clients = ({ className }) => {
     return null;
   }
 
-  const { anchor, clients } = frontmatter;
+  const { anchor, clients, header } = frontmatter;
 
   return (
-    <PageSection className={clsx("py-5", className)} id={anchor}>
+    <PageSection className={clsx("", className)} id={anchor}>
+      <Row>
+        <SectionHeader header={header} subheader=" "/>
+      </Row>
       <Row>
         {clients.map(({ href, imageFileName }) => (
           <Col md={3} sm={6} className="my-3" key={imageFileName}>

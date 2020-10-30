@@ -39,7 +39,7 @@ const Portfolio = ({ className }) => {
   const { anchor, header: rootHeader, subheader: rootSubHeader, portfolios } = frontmatter;
 
   return (
-    <PageSection className={clsx("portfolio-section", className)} id={anchor}>
+    <PageSection className={clsx("portfolio-section py-5", className)} id={anchor}>
       <Row>
         <SectionHeader header={rootHeader} subheader={rootSubHeader} />
       </Row>
