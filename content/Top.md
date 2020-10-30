@@ -1,7 +1,7 @@
 ---
-header: "It's Nice To Meet You"
-subheader: "Welcome To Our Studio!"
+header: "Лоджистик-Юг"
+subheader: "Логистика и дистрибуция"
 imageFileName: "header-bg.jpg"
-jumpToAnchor: "Services"
-jumpToAnchorText: "Tell Me More"
+jumpToAnchor: "Услуги"
+jumpToAnchorText: "Хочу узнать больше"
 ---
