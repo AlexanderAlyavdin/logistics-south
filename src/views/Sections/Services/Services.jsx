@@ -39,7 +39,7 @@ const Services = ({ className }) => {
       <Row>
         <SectionHeader header={rootHeader} subheader={rootSubHeader} />
       </Row>
-      <Row className="text-center">
+      <Row className="text-center justify-content-center">
         {services.map(({ header, content, iconName }) => (
           <Col md={4} key={header}>
             <ServiceItem iconName={iconName} header={header} content={content} />
