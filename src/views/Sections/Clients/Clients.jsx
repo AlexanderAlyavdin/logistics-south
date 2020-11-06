@@ -18,7 +18,6 @@ const Clients = ({ className }) => {
           anchor
           header
           clients {
-            href
             imageFileName
           }
         }
@@ -40,8 +39,8 @@ const Clients = ({ className }) => {
       </Row>
       <Row>
         {clients.map(({ href, imageFileName }) => (
-          <Col md={3} sm={6} className="my-3" key={imageFileName}>
-            <Client href={href} imageFileName={imageFileName} />
+          <Col md={3} sm={4} xs={4} className="my-3" key={imageFileName}>
+            <Client imageFileName={imageFileName} />
           </Col>
         ))}
       </Row>

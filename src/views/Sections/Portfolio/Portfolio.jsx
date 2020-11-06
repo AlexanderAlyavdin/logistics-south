@@ -20,7 +20,6 @@ const Portfolio = ({ className }) => {
           subheader
           portfolios {
             content
-            extraInfo
             header
             imageFileName
             imageFileNameDetail
@@ -55,7 +54,7 @@ const Portfolio = ({ className }) => {
               imageFileNameDetail={imageFileNameDetail}
               extraInfo={
                 <ul>
-                  {extraInfo.map((ei) => (
+                  {(extraInfo || []).map((ei) => (
                     <li key={ei}>{ei}</li>
                   ))}
                 </ul>
