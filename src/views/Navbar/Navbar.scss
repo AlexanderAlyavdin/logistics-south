@@ -12,6 +12,11 @@
     @include heading-font;
   }
   .navbar-brand {
+    .image-logo {
+      width: 50px;
+      margin-right: 10px;
+    }
+
     color: $primary !important;
     @include script-font;
     &.active,

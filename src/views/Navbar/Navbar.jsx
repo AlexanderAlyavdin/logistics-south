@@ -2,11 +2,12 @@ import React from "react";
 import clsx from "clsx";
 import { useStaticQuery, graphql } from "gatsby";
 
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, Container, Nav, Row } from "react-bootstrap";
 
 import useWindowOnScroll from "hooks/useWindowOnScroll";
 import useSmoothScrollTo from "hooks/useSmoothScrollTo";
 import Icon from "components/Icon";
+import Image from "components/Image";
 import NavItem from "components/NavItem";
 
 import "./Navbar.scss";
@@ -33,6 +34,7 @@ const MyNavbar = () => {
       markdownRemark(fields: { fileName: { regex: "/navbar/i" } }) {
         frontmatter {
           brand
+          logoImage
           menuText
         }
       }
@@ -69,7 +71,10 @@ const MyNavbar = () => {
     >
       <Container>
         <Navbar.Brand className="cursor-pointer" onClick={handleBrandClick}>
-          {markdownRemark.frontmatter.brand}
+          <Row className="align-items-center">
+            <Image className="image-logo" fileName={markdownRemark.frontmatter.logoImage} alt=""/>
+            {markdownRemark.frontmatter.brand}
+          </Row>
         </Navbar.Brand>
         <Navbar.Toggle onClick={toggleMenu} aria-label="Toggle navigation">
           {markdownRemark.frontmatter.menuText}
