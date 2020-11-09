@@ -37,7 +37,7 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <SEO
-        title="Main"
+        title="Лоджистик-Юг"
         keywords={[
           "gatsby",
           "gatsbyjs",

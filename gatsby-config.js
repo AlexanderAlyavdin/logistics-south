@@ -2,22 +2,22 @@ const path = require("path");
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsyby Startbootstrap Agency",
-    description: "gatsby version of startbootstrap-agency with i18n support.",
-    author: "thundermiracle",
+    title: "Логистика и дистрибуция",
+    description: "",
+    author: "alexander.alyavdin",
   },
   plugins: [
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "UA-119418003-5",
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-google-analytics",
+    //   options: {
+    //     trackingId: "UA-119418003-5",
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "Gatsby Startbootstrap Agency",
-        short_name: "Agency",
+        name: "Логистика и дистрибуция",
+        short_name: "Лоджистик-Юг",
         start_url: "/",
         background_color: "#ffffff",
         theme_color: "#663399",
