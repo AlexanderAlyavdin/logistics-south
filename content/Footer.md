@@ -5,7 +5,7 @@ social: {
   facebook: "",
   medium: ""
 }
-privacyText: "Политика Конфиденциальности"
+privacyText: ""
 privacyHref: "#!"
 termsText: ""
 termsHref: "#!"
