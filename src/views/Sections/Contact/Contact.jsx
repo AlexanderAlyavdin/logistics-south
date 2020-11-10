@@ -66,20 +66,6 @@ const Contact = ({ className }) => {
           </a>
         </Col>
       </Row>
-
-      {/* <Row className="justify-content-center">
-
-        <Col lg={8} className="text-center">
-        <hr className="divider my-4" />
-          <h3 className="mt-0">Документы</h3>
-          <p>
-            <a href={requisitesFile}>Договор поставки товара</a>
-          </p>
-          <a href={contractFile}>Карточка контрагента</a>
-        </Col>
-      </Row> */}
-
-
     </PageSection>
   );
 };
