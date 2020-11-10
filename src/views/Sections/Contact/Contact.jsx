@@ -15,6 +15,8 @@ const Contact = ({ className }) => {
           anchor
           header
           subheader
+          contractFile
+          requisitesFile
           telephone
           email
         }
@@ -27,7 +29,7 @@ const Contact = ({ className }) => {
     return null;
   }
 
-  const { anchor, header, subheader, telephone, email } = frontmatter;
+  const { anchor, header, subheader, telephone, email, contractFile, requisitesFile } = frontmatter;
 
   return (
     <PageSection className={className} id={anchor}>
@@ -39,19 +41,45 @@ const Contact = ({ className }) => {
         </Col>
       </Row>
       <Row>
-        <Col lg={4} className="ml-auto text-center">
+        <Col lg={3} className="ml-auto text-center">
           <Icon iconName="PhoneIcon" size="3x" className="text-muted mb-3" />
           <a className="d-block" href={`tel:${telephone}`}>
             {telephone}
           </a>
         </Col>
-        <Col lg={4} className="mr-auto text-center">
+        <Col lg={3} className="text-center">
           <Icon iconName="EnvelopIcon" size="3x" className="text-muted mb-3" />
           <a className="d-block" href={`mailto:${email}`}>
             {email}
           </a>
         </Col>
+        <Col lg={3} className="text-center">
+          <Icon iconName="FileDownloadIcon" size="3x" className="text-muted mb-3" />
+          <a className="d-block" href={contractFile}>
+            Договор поставки товара
+          </a>
+        </Col>
+        <Col lg={3} className="mr-auto text-center">
+          <Icon iconName="FileDownloadIcon" size="3x" className="text-muted mb-3" />
+          <a className="d-block" href={requisitesFile}>
+            Карточка контрагента
+          </a>
+        </Col>
       </Row>
+
+      {/* <Row className="justify-content-center">
+
+        <Col lg={8} className="text-center">
+        <hr className="divider my-4" />
+          <h3 className="mt-0">Документы</h3>
+          <p>
+            <a href={requisitesFile}>Договор поставки товара</a>
+          </p>
+          <a href={contractFile}>Карточка контрагента</a>
+        </Col>
+      </Row> */}
+
+
     </PageSection>
   );
 };
