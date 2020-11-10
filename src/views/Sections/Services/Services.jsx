@@ -36,8 +36,10 @@ const Services = ({ className }) => {
 
   return (
     <PageSection className={className} id={anchor}>
-      <Row>
-        <SectionHeader header={rootHeader} subheader={rootSubHeader} />
+      <SectionHeader header={rootHeader} />
+
+      <Row className="mb-5 mt-5">
+        <pre className="text-center">{rootSubHeader}</pre>
       </Row>
       <Row className="text-center justify-content-center">
         {services.map(({ header, content, iconName }) => (
