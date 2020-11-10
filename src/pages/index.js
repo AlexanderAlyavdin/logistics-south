@@ -39,16 +39,17 @@ const IndexPage = ({ data }) => {
       <SEO
         title="Лоджистик-Юг"
         keywords={[
-          "gatsby",
-          "gatsbyjs",
-          "landing page",
-          "landing",
-          "i18n",
-          "eslint",
-          "bootstrap",
-          "startbootstrap-agency",
+          "Логистика",
+          "Лоджистик-Юг",
+          "Логистик-Юг",
+          "Дистрибьютор",
+          "Краснодар",
+          "Регион-Юг",
+          "Косметика",
+          "Бытовая химия",
+          "Гигиена",
         ]}
-        description="gatsby version of startbootstrap-agency with i18n support"
+        description="Лоджистик-Юг. Логистика и дистрибуция"
       />
       <Navbar />
       <Top />

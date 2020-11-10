@@ -1,11 +1,8 @@
 {
-  "name": "gatsby-startbootstrap-agency",
-  "description": "gatsby version of startbootstrap-agency with i18n support",
+  "name": "logistic-yug",
+  "description": "Лоджистик-Юг. Логистика и дистрибуция",
   "version": "0.1.0",
-  "author": "thundermiracle",
-  "bugs": {
-    "url": "https://github.com/thundermiracle/gatsby-startbootstrap-agency/issues"
-  },
+  "author": "alexander.alyavdin",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
@@ -58,23 +55,9 @@
     "gatsby-plugin-eslint": "^2.0.8",
     "prettier": "^2.0.4"
   },
-  "homepage": "https://thundermiracle.github.io/gatsby-startbootstrap-agency",
-  "keywords": [
-    "gatsby",
-    "gatsbyjs",
-    "landing page",
-    "landing",
-    "i18n",
-    "eslint",
-    "bootstrap",
-    "startbootstrap-agency"
-  ],
+  "keywords": [],
   "license": "MIT",
   "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thundermiracle/gatsby-startbootstrap-agency.git"
-  },
   "scripts": {
     "clean": "gatsby clean",
     "build": "gatsby build",
