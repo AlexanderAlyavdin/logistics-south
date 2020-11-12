@@ -12,6 +12,7 @@
     @include heading-font;
   }
   .navbar-brand {
+    padding-left: 15px;
     .image-logo {
       width: 50px;
       margin-right: 10px;
@@ -19,7 +20,7 @@
 
     color: $primary !important;
     @include script-font;
-    font-size: 35px !important;
+    font-size: 23px !important;
     font-weight: 600 !important;
     &.active,
     &:active,
@@ -29,7 +30,7 @@
     }
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar-root {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -39,7 +40,7 @@
     border: none;
     background-color: transparent;
     .navbar-brand {
-      font-size: 1.75em;
+      font-size: 31px !important;
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s;

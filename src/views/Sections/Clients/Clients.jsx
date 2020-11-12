@@ -37,9 +37,9 @@ const Clients = ({ className }) => {
       <Row>
         <SectionHeader header={header} subheader=" "/>
       </Row>
-      <Row>
+      <Row className="justify-content-center">
         {clients.map(({ href, imageFileName }) => (
-          <Col md={3} sm={4} xs={4} className="my-3" key={imageFileName}>
+          <Col md={3} sm={4} xs={5} className="my-3" key={imageFileName}>
             <Client imageFileName={imageFileName} />
           </Col>
         ))}

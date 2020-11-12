@@ -27,9 +27,14 @@ h6 {
 
 pre {
   @include heading-font;
-  font-size: 21px;
+  font-size: 17px;
+  padding: 0 17px;
   white-space: pre-wrap;
   font-weight: 500;
+
+  @media (min-width: 768px) {
+    font-size: 21px;
+  }
 }
 
 .cursor-pointer {

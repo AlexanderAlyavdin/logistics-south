@@ -1,5 +1,5 @@
 ---
-copyright: "Copyright © Логистик ЮГ 2020"
+copyright: "Copyright © ООО \"Лоджистик-ЮГ\" 2020"
 social: {
   twitter: "",
   facebook: "",
