@@ -16,7 +16,6 @@ const Contact = ({ className }) => {
           header
           subheader
           contractFile
-          requisitesFile
           telephone
           email
         }
@@ -29,7 +28,7 @@ const Contact = ({ className }) => {
     return null;
   }
 
-  const { anchor, header, subheader, telephone, email, contractFile, requisitesFile } = frontmatter;
+  const { anchor, header, subheader, telephone, email, contractFile } = frontmatter;
 
   return (
     <PageSection className={className} id={anchor}>
@@ -54,15 +53,15 @@ const Contact = ({ className }) => {
           </a>
         </Col>
         <Col lg={3} className="text-center">
-          <Icon iconName="FileDownloadIcon" size="3x" className="text-muted mb-3" />
-          <a className="d-block" href={contractFile}>
-            Договор поставки товара
+          <Icon iconName="MapMarkedAltIcon" size="3x" className="text-muted mb-3" />
+          <a className="d-block" href="https://yandex.ru/maps/-/CCUA6WdjhA">
+            129110, г. Москва, ул.Щепкина, дом 58, строение 3, 3 этаж, помещение I, комната №3
           </a>
         </Col>
         <Col lg={3} className="mr-auto text-center">
           <Icon iconName="FileDownloadIcon" size="3x" className="text-muted mb-3" />
-          <a className="d-block" href={requisitesFile}>
-            Карточка контрагента
+          <a className="d-block" href={contractFile}>
+            Договор поставки товара
           </a>
         </Col>
       </Row>

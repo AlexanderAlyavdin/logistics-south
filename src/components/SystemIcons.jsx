@@ -1,6 +1,6 @@
 import makeFAIcon from "utils/makeFAIcon";
 
-import { faPhone, faEnvelope, faPlus, faBars, faTimes, faHandshake, faBriefcase, faWallet, faFileDownload } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faEnvelope, faPlus, faBars, faTimes, faHandshake, faBriefcase, faWallet, faFileDownload, faMapMarkedAlt } from "@fortawesome/free-solid-svg-icons";
 import {
   faTwitter,
   faFacebookF,
@@ -20,6 +20,7 @@ export const HandshakeIcon = makeFAIcon(faHandshake);
 export const BriefcaseIcon = makeFAIcon(faBriefcase);
 export const WalletIcon = makeFAIcon(faWallet);
 export const FileDownloadIcon = makeFAIcon(faFileDownload);
+export const MapMarkedAltIcon = makeFAIcon(faMapMarkedAlt);
 
 export const TwitterIcon = makeFAIcon(faTwitter);
 export const FacebookIcon = makeFAIcon(faFacebookF);
