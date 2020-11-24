@@ -1,0 +1,74 @@
+.map-component {
+  svg {
+    overflow: visible;
+    -webkit-filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.7));
+    filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.7));
+  }
+  path {
+    stroke: rgb(125, 162, 204);
+    stroke-width: 0.2;
+    fill: rgb(59, 109, 167);
+
+    // fill: $gray-900;
+    pointer-events: all;
+    transition: fill 0.3s;
+    &:hover {
+      transition: fill 0.3s;
+    }
+  }
+
+  &__region--highlighted {
+    path {
+      fill: rgb(77, 144, 219) !important;
+    }
+  }
+  // #SOUTH path {
+  //   fill: #5f0000;
+  // }
+
+  // #MOSCOW {
+  //   path {
+  //     fill: green;
+  //   }
+  // }
+}
+
+// #MOSCOW, #PFO, #TATARSTAN, #URAL, #SIBIR, #CHERNOZEM, #SOUTH, #KAZAHSTAN, #BELARUS, #PETERSBURG {
+//     &:hover path{
+//       fill: $color-secondary !important;
+//     }
+// }
+
+//  #PETERSBURG {
+//    path {
+//      fill: green;
+//    }
+//  }
+//
+//  #SOUTH path{
+//    fill: #5f0000;
+//  }
+//
+//  #PFO path {
+//    fill: #303b3f;
+//  }
+//
+//  #TATARSTAN path {
+//    fill: #3b3b00;
+//  }
+//
+//  #MOSCOW path {
+//    fill: #904e95;
+//  }
+//
+//  #CHERNOZEM path {
+//    fill: black;
+//  }
+//
+//  #URAL path {
+//    fill: darkblue;
+//  }
+//
+//#SIBIR path {
+//  fill: #3e2a24;
+//}

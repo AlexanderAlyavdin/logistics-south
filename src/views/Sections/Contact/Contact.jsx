@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 import { useStaticQuery, graphql } from "gatsby";
 
 import { Row, Col } from "react-bootstrap";
 import Icon from "components/Icon";
+import RussianMap from "components/Map/RussianMap";
+import CityContact from "components/Map/CityContact";
 import PageSection from "components/PageSection";
+import SectionHeader from "components/SectionHeader";
+
 
 const Contact = ({ className }) => {
   const { markdownRemark = {} } = useStaticQuery(graphql`
@@ -23,6 +27,8 @@ const Contact = ({ className }) => {
     }
   `);
 
+  const [ selectedCity, setSelectedCity ] = useState('Москва');
+
   const frontmatter = markdownRemark.frontmatter;
   if (!frontmatter) {
     return null;
@@ -32,6 +38,12 @@ const Contact = ({ className }) => {
 
   return (
     <PageSection className={className} id={anchor}>
+      <SectionHeader header="Контакты" subheader=" "/>
+
+      <CityContact selectedCityName={selectedCity}/>
+      <RussianMap selectedCity={selectedCity} onCitySelected={(city) => { setSelectedCity(city) }}/>
+
+
       <Row className="justify-content-center">
         <Col lg={8} className="text-center">
           <h2 className="mt-0">{header}</h2>
