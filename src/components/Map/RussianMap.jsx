@@ -69,7 +69,13 @@ const RussianMap = ({ onCitySelected, selectedCity }) => {
 
 
           return (
-            <div key={label} id={label} className={getPointClass(label, size)} style={{ width, height: width, top: `${y}%`, left: `${x}%`}}/>
+            <div
+              key={label}
+              id={label}
+              className={getPointClass(label, size)}
+              style={{ width, height: width, top: `${y}%`, left: `${x}%`}}
+              onClick={() => { onCitySelected(label) }}
+            />
           );
         })}
 

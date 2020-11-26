@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 import { useStaticQuery, graphql } from "gatsby";
+import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 
 import { Row, Col } from "react-bootstrap";
 import Icon from "components/Icon";
@@ -12,6 +13,8 @@ import SectionHeader from "components/SectionHeader";
 
 
 const Contact = ({ className }) => {
+  const breakpoint = useBreakpoint();
+
   const { markdownRemark = {} } = useStaticQuery(graphql`
     query ContactQuery {
       markdownRemark(fields: { fileName: { regex: "/contact/i" } }) {
@@ -40,11 +43,11 @@ const Contact = ({ className }) => {
     <PageSection className={className} id={anchor}>
       <SectionHeader header="Контакты" subheader=" "/>
 
-      <CityContact selectedCityName={selectedCity}/>
-      <RussianMap selectedCity={selectedCity} onCitySelected={(city) => { setSelectedCity(city) }}/>
+      <CityContact selectedCityName={selectedCity} onCitySelected={(city) => { setSelectedCity(city) }}/>
+      {!breakpoint.sm && <RussianMap selectedCity={selectedCity} onCitySelected={(city) => { setSelectedCity(city) }}/>}
 
 
-      <Row className="justify-content-center">
+      <Row className={`justify-content-center ${breakpoint.sm ? 'mt-5' : ''}`}>
         <Col lg={8} className="text-center">
           <h2 className="mt-0">{header}</h2>
           <hr className="divider my-4" />

@@ -1,5 +1,13 @@
 const path = require("path");
 
+const myCustomQueries = {
+  xs: '(max-width: 320px)',
+  sm: '(max-width: 768px)',
+  md: '(max-width: 1024px)',
+  l: '(max-width: 1536px)',
+  portrait: '(orientation: portrait)',
+};
+
 module.exports = {
   siteMetadata: {
     title: "Логистика и дистрибуция",
@@ -42,6 +50,12 @@ module.exports = {
     },
     "gatsby-plugin-eslint",
     "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-plugin-breakpoints",
+      options: {
+          queries: myCustomQueries,
+      },
+    },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     "gatsby-plugin-offline",

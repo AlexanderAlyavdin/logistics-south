@@ -7,7 +7,7 @@ $text-color: black;
 
 .map-component {
   position: relative;
-  left: 20%;
+  left: 15%;
   // height: $map-height * $multiplier;
   // margin: -45vw 0 0 4vw;
   // @include sm {
@@ -29,9 +29,12 @@ $text-color: black;
 
   &__city-point {
     background-color: #e24586;
+    border: 2px solid white;
     border-radius: 50%;
     position: absolute;
     transition: transform 0.3s;
+    pointer-events: auto;
+    cursor: pointer;
 
     &--highlighted {
       transition: transform 0.3s, background-color 0.3s;
@@ -55,10 +58,12 @@ $text-color: black;
     //   font-weight: 400;
     // }
 
+    transition: 0.1s all;
+
     &--selected {
-      font-size: 1.18vw;
-      color: #e7cfd9;
-      text-shadow: white 0 0 2px;
+      font-size: 1.15vw;
+      color: #ffacc5;
+      text-shadow: #351f1f 0 0 2px;
     }
   }
 }

@@ -56,8 +56,8 @@ const CITY_POINTS = [
     "size": 8,
     "region": "",
     "showLabel": true,
-    "labelOffset": -1.2,
-    "labelOffsetX": 1.4,
+    "labelOffset": -1.1,
+    "labelOffsetX": 1.6,
   },
   // {
   //   "x": 464.671875,
@@ -106,7 +106,7 @@ const CITY_POINTS = [
     "size": 8,
     "region": "",
     "showLabel": true,
-    "labelOffset": -1.2
+    "labelOffset": -1.4
   },
 ];
 
