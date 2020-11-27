@@ -1,0 +1,69 @@
+$map-width: 90vw;
+$map-height: 50vw;
+$multiplier: 1.65;
+
+$color-secondary: blue;
+$text-color: black;
+
+.map-component {
+  position: relative;
+  left: 15%;
+  // height: $map-height * $multiplier;
+  // margin: -45vw 0 0 4vw;
+  // @include sm {
+  //   $map-width: 900px;
+  //   $map-height: 500px;
+  //   $multiplier: 1.85;
+  //   width: $map-width * $multiplier;
+  //   height: $map-height * $multiplier;
+  //   margin: calc(-1000px + 70vh) 0 0 4vw;
+  // }
+  &__map-overlay-container {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1020;
+  }
+
+  &__city-point {
+    background-color: #e24586;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.3s;
+    pointer-events: auto;
+    cursor: pointer;
+
+    &--highlighted {
+      transition: transform 0.3s, background-color 0.3s;
+      transform: scale(1.4);
+      background-color: rgb(255, 137, 27);
+    }
+  }
+
+  &__city-label {
+    color: $white;
+    text-shadow: $black 0 0 5px;
+    position: absolute;
+    font-size: 1.05vw;
+    font-weight: 400;
+    font-family: sans-serif;
+    pointer-events: auto;
+    cursor: pointer;
+
+    // @include sm {
+    //   font-size: 12px;
+    //   font-weight: 400;
+    // }
+
+    transition: 0.1s all;
+
+    &--selected {
+      font-size: 1.15vw;
+      color: #ffacc5;
+      text-shadow: #351f1f 0 0 2px;
+    }
+  }
+}

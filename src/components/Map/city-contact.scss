@@ -1,0 +1,13 @@
+.city-contact {
+  @media (min-width: 768px) {
+    margin-top: 340px;
+    position: absolute;
+    width: 25%;
+    left: 27%;
+    z-index: 1029;
+  }
+}
+.city-contact__dropdown {
+  border: #366992 6px solid !important;
+  background-color: #3b709b !important;
+}
