@@ -1,11 +1,11 @@
 const path = require("path");
 
 const myCustomQueries = {
-  xs: '(max-width: 320px)',
-  sm: '(max-width: 768px)',
-  md: '(max-width: 1024px)',
-  l: '(max-width: 1536px)',
-  portrait: '(orientation: portrait)',
+  xs: "(max-width: 320px)",
+  sm: "(max-width: 768px)",
+  md: "(max-width: 1024px)",
+  l: "(max-width: 1536px)",
+  portrait: "(orientation: portrait)",
 };
 
 module.exports = {
@@ -53,7 +53,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-breakpoints",
       options: {
-          queries: myCustomQueries,
+        queries: myCustomQueries,
       },
     },
     "gatsby-transformer-sharp",
@@ -62,8 +62,10 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sass",
       options: {
-        data: `@import "core.scss";`,
-        includePaths: [path.resolve(__dirname, "src/style")],
+        sassOptions: {
+          includePaths: [path.resolve(__dirname, "src/style")],
+        },
+        additionalData: `@import "core.scss";`,
       },
     },
     {
