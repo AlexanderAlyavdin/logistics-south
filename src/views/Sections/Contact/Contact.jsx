@@ -23,6 +23,9 @@ const Contact = ({ className }) => {
           subheader
           contractFile
           sheetFile
+          consentFile
+          privacyPolicyFile
+          termsFile
           telephone
           email
         }
@@ -37,7 +40,18 @@ const Contact = ({ className }) => {
     return null;
   }
 
-  const { anchor, header, subheader, telephone, email, sheetFile, contractFile } = frontmatter;
+  const {
+    anchor,
+    header,
+    subheader,
+    telephone,
+    email,
+    sheetFile,
+    contractFile,
+    consentFile,
+    privacyPolicyFile,
+    termsFile,
+  } = frontmatter;
 
   return (
     <PageSection className={className} id={anchor}>
@@ -94,6 +108,26 @@ const Contact = ({ className }) => {
           <Icon iconName="FileDownloadIcon" size="3x" className="text-muted mb-3" />
           <a className="d-block" href={sheetFile} rel="noopener noreferrer" target="_blank">
             Специальная оценка условий труда
+          </a>
+        </Col>
+      </Row>
+      <Row className="justify-content-center mt-5">
+        <Col lg={3} className="text-center">
+          <Icon iconName="FileDownloadIcon" size="3x" className="text-muted mb-3" />
+          <a className="d-block" href={consentFile} rel="noopener noreferrer" target="_blank">
+            Согласие на обработку персональных данных
+          </a>
+        </Col>
+        <Col lg={3} className="text-center">
+          <Icon iconName="FileDownloadIcon" size="3x" className="text-muted mb-3" />
+          <a className="d-block" href={privacyPolicyFile} rel="noopener noreferrer" target="_blank">
+            Политика обработки персональных данных
+          </a>
+        </Col>
+        <Col lg={3} className="text-center">
+          <Icon iconName="FileDownloadIcon" size="3x" className="text-muted mb-3" />
+          <a className="d-block" href={termsFile} rel="noopener noreferrer" target="_blank">
+            Пользовательское соглашение
           </a>
         </Col>
       </Row>
